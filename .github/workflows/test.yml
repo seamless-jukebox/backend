@@ -18,8 +18,8 @@ jobs:
           node-version: 16
           cache: yarn
         
-        - name: Build the project
-          run: yarn build
+      - name: Build the project
+        run: yarn build
 
       - name: Install dependencies
         run: yarn install
