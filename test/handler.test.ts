@@ -1,6 +1,9 @@
 import router from "../src/handler";
 
 declare var global: any;
+global.CLIENT_ID = ""
+global.CLIENT_SECRET = ""
+global.REDIRECT_TO = "https://example.org"
 
 describe("handler /login", () => {
   test("handle /login", async () => {
