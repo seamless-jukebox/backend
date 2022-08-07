@@ -5,7 +5,7 @@
   "description": "Seamless Jukebox Backend",
   "main": "dist/worker.js",
   "scripts": {
-    "build": "webpack",
+    "build": "esbuild ./src/ --bundle --outfile=dist/worker.js",
     "dev": "miniflare -H localhost --watch --debug",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
@@ -42,6 +42,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
+    "esbuild": "^0.14.53",
     "itty-router": "^2.6.1"
   }
 }
